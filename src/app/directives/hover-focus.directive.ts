@@ -1,22 +1,22 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import {
+  Directive,
+  HostListener,
+  HostBinding
+} from '@angular/core';
 
 @Directive({
-  selector: '[appHoverFocus]'
+selector: '[hoverfocus]'
 })
 export class HoverFocusDirective {
 
-  constructor() { }
+@HostBinding("style.background-color") backgroundColor!: string;
 
-  @HostBinding("style.background-color") backgroundColor!: string;
+@HostListener('mouseover') onHover() {
+  this.backgroundColor = 'blue';
+}
 
-  @HostBinding("mouseover") onHover() {
-    this.backgroundColor = 'blue';
-  }
 
-  @HostListener('mouseout') onLeave()
-  {
-    this.backgroundColor = 'inherit';
-  }
-
-  
+@HostListener('mouseout') onLeave() {
+  this.backgroundColor = 'inherit';
+}
 }

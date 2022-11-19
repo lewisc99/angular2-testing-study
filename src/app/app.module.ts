@@ -18,7 +18,8 @@ import { HoverFocusDirective } from './directives/hover-focus.directive';
     SearchComponent,
     HomeComponent,
     SquarePipe,
-    HoverFocusDirective
+    HoverFocusDirective,
+    
   ],
   imports: [
     BrowserModule,

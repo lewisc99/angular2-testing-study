@@ -1,6 +1,7 @@
 import { TestBed  } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,14 +10,15 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+  
       ]
     }).compileComponents();
   });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.componentInstance; 
     expect(app).toBeTruthy();
   });
 
@@ -30,7 +32,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('app app is running!');
+    expect(compiled.querySelector('.content span')).toContain('app app is running!');
+  
   });
 });
 
