@@ -7,6 +7,8 @@ import { SearchComponent, HomeComponent, AppRoutingModule } from './components/r
 import { SquarePipe } from './pipes/square/square.pipe';
 import { LoginComponent } from './components/login/login.component';
 import { HoverFocusDirective } from './directives/hover-focus.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserLoginComponent } from './components/user-login/user-login.component';
 
 
 
@@ -19,12 +21,15 @@ import { HoverFocusDirective } from './directives/hover-focus.directive';
     HomeComponent,
     SquarePipe,
     HoverFocusDirective,
+    UserLoginComponent,
     
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

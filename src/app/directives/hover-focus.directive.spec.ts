@@ -13,7 +13,7 @@ let component: TestHoverFocusComponent;
 let fixture: ComponentFixture<TestHoverFocusComponent>;
 let inputEl: DebugElement;
 
-fdescribe('Directive: HoverFocus', () => {
+describe('Directive: HoverFocus', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HoverFocusDirective,TestHoverFocusComponent]

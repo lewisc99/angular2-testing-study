@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/authservice/auth.service';
 
 @Component({
@@ -13,8 +14,11 @@ export class LoginComponent {
 
   constructor(private auth:AuthService){}
 
+
   needsLogin()
   {
     return !this.auth.isAuthenticated();
   }
+
+  
 }

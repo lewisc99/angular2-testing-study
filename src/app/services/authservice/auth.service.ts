@@ -14,4 +14,18 @@ export class AuthService {
     return !!localStorage.getItem('token');
 
   }
+
+  public userLogin(email:string, password:string):boolean
+  {
+    if(email == "luiz@gmail.com" && password  == "12345678")
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  
 }
